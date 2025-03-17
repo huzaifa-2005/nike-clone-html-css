@@ -13,7 +13,6 @@ body {
   overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
-
 /* Navigation Bar */
 header {
   background: #555; /* Dark Grey */
@@ -38,14 +37,14 @@ nav {
 }
 
 .text-logo {
-  font-size: 1.8rem; /* Reduced for mobile */
+  font-size: 2.2rem; 
   font-weight: 900;
   font-family: 'Arial Black', sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #ff3c00; /* Nike Orange */
   background-color: transparent;
-  padding: 10px 20px;
+  padding: 15px 25px; /* Increased padding for larger size */
   border-radius: 5px;
   text-align: center;
   font-style: italic;
@@ -72,33 +71,6 @@ nav ul li a {
 
 nav ul li a:hover {
   color: #ff3c00;
-}
-
-/* Media Queries for Mobile */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: row; /* Ensure navigation items are horizontal */
-    align-items: center;
-    text-align: center;
-  }
-
-  nav ul {
-    flex-direction: row; /* Ensure navigation items are horizontal */
-    gap: 10px;
-    justify-content: center;
-  }
-
-  .logo {
-    margin-left: 0; /* Center the logo */
-  }
-
-  .text-logo {
-    font-size: 1.5rem; /* Further reduce font size for smaller screens */
-  }
-
-  nav ul li a {
-    font-size: 14px; /* Further reduce font size for smaller screens */
-  }
 }
 
 /* Hero Section */
@@ -149,13 +121,14 @@ nav ul li a:hover {
   width: 100%; /* Full width on mobile */
   max-width: 300px; /* Adjusted for mobile */
   margin-top: 20px; /* Added margin for spacing */
-  margin-left: 30px;
+  margin-left: 20px;
 }
 
 /* Products Section */
 .products {
   text-align: center;
   padding: 30px; /* Reduced padding for mobile */
+  background-color: #8AAA2D; /* Green background */
 }
 
 .products h2 {
@@ -289,13 +262,28 @@ footer {
 /* Media Queries for Mobile */
 @media (max-width: 768px) {
   nav {
-    flex-direction: column;
+    flex-direction: row; /* Ensure navigation items are horizontal */
+    align-items: center;
     text-align: center;
   }
 
   nav ul {
-    flex-direction: column;
+    flex-direction: row; /* Ensure navigation items are horizontal */
     gap: 10px;
+    justify-content: center;
+  }
+
+  .logo {
+    margin-left: 0; /* Center the logo */
+  }
+
+  .text-logo {
+    font-size: 2rem; /* Further increased size for "NIKE" text */
+    padding: 12px 20px; /* Adjusted padding for larger size */
+  }
+
+  nav ul li a {
+    font-size: 14px; /* Further reduce font size for smaller screens */
   }
 
   .hero {
@@ -308,6 +296,7 @@ footer {
     text-align: center;
   }
 
+
   .hero-image {
     width: 100%;
     max-width: 300px;
@@ -317,6 +306,7 @@ footer {
   .contact h2 {
     width: 90%;
     padding: 20px;
-    
   }
+
+
 }
