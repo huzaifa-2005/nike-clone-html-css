@@ -37,14 +37,14 @@ nav {
 }
 
 .text-logo {
-  font-size: 1.8rem; /* Reduced for mobile */
+  font-size: 2.2rem; /* Increased size for "NIKE" text */
   font-weight: 900;
   font-family: 'Arial Black', sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #ff3c00; /* Nike Orange */
   background-color: transparent;
-  padding: 10px 20px;
+  padding: 15px 25px; /* Increased padding for larger size */
   border-radius: 5px;
   text-align: center;
   font-style: italic;
@@ -277,7 +277,8 @@ footer {
   }
 
   .text-logo {
-    font-size: 1.5rem; /* Further reduce font size for smaller screens */
+    font-size: 2rem; /* Further increased size for "NIKE" text */
+    padding: 12px 20px; /* Adjusted padding for larger size */
   }
 
   nav ul li a {
