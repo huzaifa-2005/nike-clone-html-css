@@ -79,6 +79,7 @@ nav ul li a:hover {
   align-items: center;
   justify-content: center;
   background: linear-gradient(to right, #e3e3e3, #fff);
+  width: 100%;
   padding: 50px;
   height: 80vh;
   flex-wrap: wrap;
