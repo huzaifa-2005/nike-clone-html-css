@@ -10,14 +10,16 @@ body {
   background-color: #8AAA2D;
   color: #333;
   line-height: 1.6;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
 /* Navigation Bar */
 header {
   background: #555; /* Dark Grey */
-  padding: 8px 16px;
+  padding: 10px 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: 1000;
 }
@@ -26,6 +28,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -34,16 +37,15 @@ nav {
 }
 
 .text-logo {
-  font-size: 3.0rem;
+  font-size: 2.5rem;
   font-weight: 900;
   font-family: 'Arial Black', sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #ff3c00; /* Nike Orange */
   background-color: transparent;
-  padding: 10px 30px;
+  padding: 10px 20px;
   border-radius: 5px;
-  display: inline-block;
   text-align: center;
   font-style: italic;
 }
@@ -52,6 +54,7 @@ nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 nav ul li {
@@ -78,6 +81,8 @@ nav ul li a:hover {
   background: linear-gradient(to right, #e3e3e3, #fff);
   padding: 50px;
   height: 80vh;
+  flex-wrap: wrap;
+  margin-top: 80px; /* Adjust for sticky navbar */
 }
 
 .hero-content {
@@ -110,10 +115,27 @@ nav ul li a:hover {
   background: #cc3000;
 }
 
+/* Responsive Fix for Hero Image */
 .hero-image {
-  margin-left: 40px;
   width: 50%;
   max-width: 500px;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    padding: 30px;
+  }
+  .hero-content {
+    max-width: 100%;
+  }
+  .hero-image {
+    width: 100%;
+    max-width: 350px;
+    margin-top: 20px;
+  }
 }
 
 /* Products Section */
@@ -122,16 +144,15 @@ nav ul li a:hover {
   padding: 50px;
 }
 
-.products  h2 {
+.products h2 {
   font-size: 35px;
   margin-bottom: 25px;
   color: white;
   transition: color 0.3s ease-in-out;
 }
 
-.products h2:hover{
+.products h2:hover {
   color: gray;
-    
 }
 
 .product-grid {
@@ -172,26 +193,24 @@ nav ul li a:hover {
 }
 
 /* About Section */
-
 .about h1 {
-    text-align: center;
-    font-size: 35px;
-    margin-bottom: 25px;
-    color: white;
-    transition: color 0.3s ease-in-out;
-  }
-  
-  .about h1:hover{
-    color: gray;
-      
-  }
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 25px;
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+
+.about h1:hover {
+  color: gray;
+}
 
 .about-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
 
 .about h2 {
   font-size: 20px;
@@ -202,9 +221,7 @@ nav ul li a:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 50%;
   text-align: center;
-  font-size: 18px;
-  color:#333;
-  
+  color: #333;
 }
 
 .contact h1 {
@@ -215,9 +232,8 @@ nav ul li a:hover {
   transition: color 0.3s ease-in-out;
 }
 
-.contact h1:hover{
+.contact h1:hover {
   color: gray;
-    
 }
 
 .contact-grid {
@@ -228,18 +244,15 @@ nav ul li a:hover {
 }
 
 .contact h2 {
-font-size: 20px;
-margin: 10px 0;
-background: linear-gradient(to right, #e3e3e3, #fff);
-padding: 50px;
-text-align: center;
-border-radius: 20px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-width: 50%;
-text-align: center;
-font-size: 18px;
-color:#333;
-
+  font-size: 20px;
+  margin: 10px 0;
+  background: linear-gradient(to right, #e3e3e3, #fff);
+  padding: 50px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 50%;
+  color: #333;
 }
 
 /* Footer */
@@ -254,4 +267,38 @@ footer {
 .footer-logo {
   width: 150px;
   margin-bottom: 10px;
+}
+
+/* In order to make mobile responsive  */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-image {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .about h2,
+  .contact h2 {
+    width: 80%;
+    padding: 30px;
+  }
 }
