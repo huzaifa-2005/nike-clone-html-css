@@ -13,6 +13,7 @@ body {
   overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
+
 /* Navigation Bar */
 header {
   background: #555; /* Dark Grey */
@@ -71,6 +72,33 @@ nav ul li a {
 
 nav ul li a:hover {
   color: #ff3c00;
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: row; /* Ensure navigation items are horizontal */
+    align-items: center;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: row; /* Ensure navigation items are horizontal */
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .logo {
+    margin-left: 0; /* Center the logo */
+  }
+
+  .text-logo {
+    font-size: 1.5rem; /* Further reduce font size for smaller screens */
+  }
+
+  nav ul li a {
+    font-size: 14px; /* Further reduce font size for smaller screens */
+  }
 }
 
 /* Hero Section */
