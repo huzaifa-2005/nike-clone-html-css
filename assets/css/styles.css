@@ -13,6 +13,7 @@ body {
   overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
+
 /* Navigation Bar */
 header {
   background: #555; /* Dark Grey */
@@ -22,7 +23,6 @@ header {
   width: 100%;
   top: 0;
   z-index: 1000;
-  overflow: hidden; /* Prevent overflow */
 }
 
 nav {
@@ -34,22 +34,21 @@ nav {
 
 .logo {
   width: 120px; /* Reduced for mobile */
-  margin-right: auto; /* Push logo to the left */
+  margin-left: 5%;
 }
 
 .text-logo {
-  font-size: 2.2rem; /* Increased size */
+  font-size: 1.8rem; /* Reduced for mobile */
   font-weight: 900;
   font-family: 'Arial Black', sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #ff3c00; /* Nike Orange */
   background-color: transparent;
-  padding: 15px 25px; /* Increased padding */
+  padding: 10px 20px;
   border-radius: 5px;
   text-align: center;
   font-style: italic;
-  margin: 0 auto; /* Center the "NIKE" text */
 }
 
 nav ul {
@@ -57,7 +56,6 @@ nav ul {
   display: flex;
   gap: 15px; /* Reduced gap for mobile */
   flex-wrap: wrap;
-  margin-left: auto; /* Push links to the right */
 }
 
 nav ul li {
@@ -74,6 +72,33 @@ nav ul li a {
 
 nav ul li a:hover {
   color: #ff3c00;
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: row; /* Ensure navigation items are horizontal */
+    align-items: center;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: row; /* Ensure navigation items are horizontal */
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .logo {
+    margin-left: 0; /* Center the logo */
+  }
+
+  .text-logo {
+    font-size: 1.5rem; /* Further reduce font size for smaller screens */
+  }
+
+  nav ul li a {
+    font-size: 14px; /* Further reduce font size for smaller screens */
+  }
 }
 
 /* Hero Section */
@@ -124,27 +149,153 @@ nav ul li a:hover {
   width: 100%; /* Full width on mobile */
   max-width: 300px; /* Adjusted for mobile */
   margin-top: 20px; /* Added margin for spacing */
-  margin-left: 20px; /* Move image to the right of the "Shop Now" button */
+  margin-left: 30px;
+}
+
+/* Products Section */
+.products {
+  text-align: center;
+  padding: 30px; /* Reduced padding for mobile */
+}
+
+.products h2 {
+  font-size: 2rem; /* Reduced for mobile */
+  margin-bottom: 20px;
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+
+.products h2:hover {
+  color: gray;
+}
+
+.product-grid {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Reduced gap for mobile */
+  flex-wrap: wrap;
+}
+
+.product-card {
+  background: linear-gradient(to right, #e3e3e3, #fff);
+  padding: 15px; /* Reduced padding for mobile */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Full width on mobile */
+  max-width: 280px; /* Adjusted for mobile */
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.product-card h3 {
+  font-size: 1.2rem; /* Reduced for mobile */
+  margin: 10px 0;
+}
+
+.product-card p {
+  font-size: 1rem; /* Reduced for mobile */
+  color: #ff3c00;
+  font-weight: bold;
+}
+
+/* About Section */
+.about h1 {
+  text-align: center;
+  font-size: 2rem; /* Reduced for mobile */
+  margin-bottom: 20px;
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+
+.about h1:hover {
+  color: gray;
+}
+
+.about-grid {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Reduced gap for mobile */
+  flex-wrap: wrap;
+}
+
+.about h2 {
+  font-size: 1rem; /* Reduced for mobile */
+  margin: 10px 0;
+  background: linear-gradient(to right, #e3e3e3, #fff);
+  padding: 20px; /* Reduced padding for mobile */
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90%; /* Adjusted for mobile */
+  text-align: center;
+  color: #333;
+}
+
+/* Contact Section */
+.contact h1 {
+  text-align: center;
+  font-size: 2rem; /* Reduced for mobile */
+  margin-bottom: 20px;
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+
+.contact h1:hover {
+  color: gray;
+}
+
+.contact-grid {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Reduced gap for mobile */
+  flex-wrap: wrap;
+}
+
+.contact h2 {
+  font-size: 1rem; /* Reduced for mobile */
+  margin: 10px 0;
+  background: linear-gradient(to right, #e3e3e3, #fff);
+  padding: 20px; /* Reduced padding for mobile */
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90%; /* Adjusted for mobile */
+  color: #333;
+}
+
+/* Footer */
+footer {
+  background: black;
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 15px; /* Reduced padding for mobile */
+  margin-top: 30px; /* Reduced margin for mobile */
+}
+
+.footer-logo {
+  width: 120px; /* Reduced for mobile */
+  margin-bottom: 10px;
 }
 
 /* Media Queries for Mobile */
 @media (max-width: 768px) {
   nav {
-    flex-direction: row; /* Ensure navigation items are horizontal */
-    align-items: center;
+    flex-direction: column;
     text-align: center;
   }
 
   nav ul {
-    flex-direction: row; /* Ensure navigation items are horizontal */
+    flex-direction: column;
     gap: 10px;
-    justify-content: flex-end; /* Align links to the right */
-  }
-
-  .text-logo {
-    font-size: 2rem; /* Further increased size for mobile */
-    padding: 12px 20px; /* Adjusted padding for mobile */
-    margin: 0 auto; /* Center the "NIKE" text */
   }
 
   .hero {
@@ -160,6 +311,11 @@ nav ul li a:hover {
   .hero-image {
     width: 100%;
     max-width: 300px;
-    margin-left: 20px; /* Move image to the right of the "Shop Now" button */
+  }
+
+  .about h2,
+  .contact h2 {
+    width: 90%;
+    padding: 20px;
   }
 }
