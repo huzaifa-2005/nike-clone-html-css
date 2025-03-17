@@ -149,6 +149,7 @@ nav ul li a:hover {
   width: 100%; /* Full width on mobile */
   max-width: 300px; /* Adjusted for mobile */
   margin-top: 20px; /* Added margin for spacing */
+  margin-left: 30px;
 }
 
 /* Products Section */
