@@ -13,7 +13,6 @@ body {
   overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
-
 /* Navigation Bar */
 header {
   background: #555; /* Dark Grey */
@@ -74,33 +73,6 @@ nav ul li a:hover {
   color: #ff3c00;
 }
 
-/* Media Queries for Mobile */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: row; /* Ensure navigation items are horizontal */
-    align-items: center;
-    text-align: center;
-  }
-
-  nav ul {
-    flex-direction: row; /* Ensure navigation items are horizontal */
-    gap: 10px;
-    justify-content: center;
-  }
-
-  .logo {
-    margin-left: 0; /* Center the logo */
-  }
-
-  .text-logo {
-    font-size: 1.5rem; /* Further reduce font size for smaller screens */
-  }
-
-  nav ul li a {
-    font-size: 14px; /* Further reduce font size for smaller screens */
-  }
-}
-
 /* Hero Section */
 .hero {
   display: flex;
@@ -149,13 +121,13 @@ nav ul li a:hover {
   width: 100%; /* Full width on mobile */
   max-width: 300px; /* Adjusted for mobile */
   margin-top: 20px; /* Added margin for spacing */
-  margin-left: 30px;
 }
 
 /* Products Section */
 .products {
   text-align: center;
   padding: 30px; /* Reduced padding for mobile */
+  background-color: #8AAA2D; /* Green background */
 }
 
 .products h2 {
@@ -289,13 +261,27 @@ footer {
 /* Media Queries for Mobile */
 @media (max-width: 768px) {
   nav {
-    flex-direction: column;
+    flex-direction: row; /* Ensure navigation items are horizontal */
+    align-items: center;
     text-align: center;
   }
 
   nav ul {
-    flex-direction: column;
+    flex-direction: row; /* Ensure navigation items are horizontal */
     gap: 10px;
+    justify-content: center;
+  }
+
+  .logo {
+    margin-left: 0; /* Center the logo */
+  }
+
+  .text-logo {
+    font-size: 1.5rem; /* Further reduce font size for smaller screens */
+  }
+
+  nav ul li a {
+    font-size: 14px; /* Further reduce font size for smaller screens */
   }
 
   .hero {
