@@ -32,12 +32,12 @@ nav {
 }
 
 .logo {
-  width: 170px;
+  width: 120px; /* Reduced for mobile */
   margin-left: 5%;
 }
 
 .text-logo {
-  font-size: 2.5rem;
+  font-size: 1.8rem; /* Reduced for mobile */
   font-weight: 900;
   font-family: 'Arial Black', sans-serif;
   text-transform: uppercase;
@@ -53,7 +53,7 @@ nav {
 nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 15px; /* Reduced gap for mobile */
   flex-wrap: wrap;
 }
 
@@ -64,7 +64,7 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: white;
-  font-size: 18px;
+  font-size: 16px; /* Reduced for mobile */
   font-weight: bold;
   transition: color 0.3s ease-in-out;
 }
@@ -80,34 +80,35 @@ nav ul li a:hover {
   justify-content: center;
   background: linear-gradient(to right, #e3e3e3, #fff);
   width: 100%;
-  padding: 50px;
-  height: 80vh;
+  padding: 30px; /* Reduced padding for mobile */
+  height: auto; /* Adjusted for mobile */
   flex-wrap: wrap;
   margin-top: 80px; /* Adjust for sticky navbar */
 }
 
 .hero-content {
-  max-width: 50%;
-  text-align: left;
+  max-width: 100%; /* Full width on mobile */
+  text-align: center; /* Center align for mobile */
 }
 
 .hero-content h1 {
-  font-size: 50px;
+  font-size: 2.5rem; /* Reduced for mobile */
   font-weight: bold;
 }
 
 .hero-content pre {
-  font-size: 25px;
+  font-size: 1.2rem; /* Reduced for mobile */
   margin: 20px 0;
+  white-space: pre-wrap; /* Ensure text wraps on mobile */
 }
 
 .cta-button {
   display: inline-block;
   background: #ff3c00;
   color: white;
-  padding: 12px 25px;
+  padding: 10px 20px; /* Reduced padding for mobile */
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px; /* Reduced for mobile */
   border-radius: 5px;
   transition: background 0.3s ease;
 }
@@ -116,38 +117,21 @@ nav ul li a:hover {
   background: #cc3000;
 }
 
-/* Responsive Fix for Hero Image */
 .hero-image {
-  width: 50%;
-  max-width: 500px;
-}
-
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-    height: auto;
-    padding: 30px;
-  }
-  .hero-content {
-    max-width: 100%;
-  }
-  .hero-image {
-    width: 100%;
-    max-width: 350px;
-    margin-top: 20px;
-  }
+  width: 100%; /* Full width on mobile */
+  max-width: 300px; /* Adjusted for mobile */
+  margin-top: 20px; /* Added margin for spacing */
 }
 
 /* Products Section */
 .products {
   text-align: center;
-  padding: 50px;
+  padding: 30px; /* Reduced padding for mobile */
 }
 
 .products h2 {
-  font-size: 35px;
-  margin-bottom: 25px;
+  font-size: 2rem; /* Reduced for mobile */
+  margin-bottom: 20px;
   color: white;
   transition: color 0.3s ease-in-out;
 }
@@ -159,16 +143,17 @@ nav ul li a:hover {
 .product-grid {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 15px; /* Reduced gap for mobile */
   flex-wrap: wrap;
 }
 
 .product-card {
   background: linear-gradient(to right, #e3e3e3, #fff);
-  padding: 20px;
+  padding: 15px; /* Reduced padding for mobile */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 280px;
+  width: 100%; /* Full width on mobile */
+  max-width: 280px; /* Adjusted for mobile */
   text-align: center;
   transition: transform 0.3s ease-in-out;
 }
@@ -183,12 +168,12 @@ nav ul li a:hover {
 }
 
 .product-card h3 {
-  font-size: 20px;
+  font-size: 1.2rem; /* Reduced for mobile */
   margin: 10px 0;
 }
 
 .product-card p {
-  font-size: 18px;
+  font-size: 1rem; /* Reduced for mobile */
   color: #ff3c00;
   font-weight: bold;
 }
@@ -196,8 +181,8 @@ nav ul li a:hover {
 /* About Section */
 .about h1 {
   text-align: center;
-  font-size: 35px;
-  margin-bottom: 25px;
+  font-size: 2rem; /* Reduced for mobile */
+  margin-bottom: 20px;
   color: white;
   transition: color 0.3s ease-in-out;
 }
@@ -209,26 +194,27 @@ nav ul li a:hover {
 .about-grid {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 15px; /* Reduced gap for mobile */
   flex-wrap: wrap;
 }
 
 .about h2 {
-  font-size: 20px;
+  font-size: 1rem; /* Reduced for mobile */
   margin: 10px 0;
   background: linear-gradient(to right, #e3e3e3, #fff);
-  padding: 50px;
+  padding: 20px; /* Reduced padding for mobile */
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 50%;
+  width: 90%; /* Adjusted for mobile */
   text-align: center;
   color: #333;
 }
 
+/* Contact Section */
 .contact h1 {
   text-align: center;
-  font-size: 35px;
-  margin-bottom: 25px;
+  font-size: 2rem; /* Reduced for mobile */
+  margin-bottom: 20px;
   color: white;
   transition: color 0.3s ease-in-out;
 }
@@ -240,19 +226,19 @@ nav ul li a:hover {
 .contact-grid {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 15px; /* Reduced gap for mobile */
   flex-wrap: wrap;
 }
 
 .contact h2 {
-  font-size: 20px;
+  font-size: 1rem; /* Reduced for mobile */
   margin: 10px 0;
   background: linear-gradient(to right, #e3e3e3, #fff);
-  padding: 50px;
+  padding: 20px; /* Reduced padding for mobile */
   text-align: center;
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 50%;
+  width: 90%; /* Adjusted for mobile */
   color: #333;
 }
 
@@ -262,16 +248,16 @@ footer {
   width: 100%;
   color: white;
   text-align: center;
-  padding: 20px;
-  margin-top: 50px;
+  padding: 15px; /* Reduced padding for mobile */
+  margin-top: 30px; /* Reduced margin for mobile */
 }
 
 .footer-logo {
-  width: 150px;
+  width: 120px; /* Reduced for mobile */
   margin-bottom: 10px;
 }
 
-/* In order to make mobile responsive  */
+/* Media Queries for Mobile */
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
@@ -300,7 +286,7 @@ footer {
 
   .about h2,
   .contact h2 {
-    width: 80%;
-    padding: 30px;
+    width: 90%;
+    padding: 20px;
   }
 }
