@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: yellowgreen;
+  background-color: #8AAA2D;
   color: #333;
   line-height: 1.6;
 }
@@ -169,6 +169,78 @@ nav ul li a:hover {
   font-size: 18px;
   color: #ff3c00;
   font-weight: bold;
+}
+
+/* About Section */
+
+.about h1 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 25px;
+    color: white;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .about h1:hover{
+    color: gray;
+      
+  }
+
+.about-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+.about h2 {
+  font-size: 20px;
+  margin: 10px 0;
+  background: white;
+  padding: 50px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  color:#333;
+  
+}
+
+.contact h1 {
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 25px;
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+
+.contact h1:hover{
+  color: gray;
+    
+}
+
+.contact-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contact h2 {
+font-size: 20px;
+margin: 10px 0;
+background: white;
+padding: 50px;
+text-align: center;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+width: 100%;
+text-align: center;
+font-size: 18px;
+color:#333;
+
 }
 
 /* Footer */
