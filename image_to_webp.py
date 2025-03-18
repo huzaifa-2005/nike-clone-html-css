@@ -1,9 +1,16 @@
-import os
+import os 
 import shutil
 from PIL import Image
 
+# Ensure AVIF support
+try:
+    import pillow_avif
+      # Ensure AVIF support
+except ImportError:
+    print("Missing AVIF plugin! Install it using: pip install pillow-avif-plugin")
+    exit()
 
-IMAGE_EXTENSIONS = (".jpg", ".jpeg", ".png", ".webp")
+IMAGE_EXTENSIONS = (".jpg", ".jpeg", ".png", ".webp", ".avif")  # Added AVIF support
 
 # Getting script directory
 script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -38,8 +45,9 @@ if not check_for_images(original_folder):
 # Process images
 for filename in os.listdir(original_folder):
     file_path = os.path.join(original_folder, filename)
+    file_ext = filename.lower().endswith(IMAGE_EXTENSIONS)
 
-    if filename.lower().endswith(IMAGE_EXTENSIONS):
+    if file_ext:
         webp_filename = os.path.splitext(filename)[0] + ".webp"
         webp_path = os.path.join(webp_folder, webp_filename)
 
@@ -60,7 +68,9 @@ for filename in os.listdir(original_folder):
             print(f"⚡ Converting {filename} to WebP...")
             image = Image.open(file_path)
             image.save(webp_path, "WEBP", quality=80)
+            print(f" Successfully converted: {filename} → {webp_filename}")
         except Exception as e:
-            print(f"Error processing {filename}: {e}")
+            print(f" Error processing {filename}: {e}")
 
-print("All conversions/movements completed successfully!")
+print(" All conversions/movements completed successfully!")
+
