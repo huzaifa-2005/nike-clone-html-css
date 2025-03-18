@@ -1,5 +1,7 @@
+
 /* Global Styles */
     * {
+
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -27,6 +29,7 @@
     }
 
     footer {
+      
       display: flex;
       flex-wrap: wrap;
       width: 100%;
@@ -109,10 +112,8 @@
       }
     }
     
-    
     @media (max-width: 480px) {
       .shoe-card {
         width: 90%; /* One shoe per row on very small screens */
       }
     }
-    
