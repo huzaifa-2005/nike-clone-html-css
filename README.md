@@ -22,8 +22,8 @@ nike-clone-html-css/
 │   │   ├── original images/  # Uncompressed images
 │   │   ├── webp images/      # WebP optimized images
 ├── screenshots/   
-│   │   ├── landing-page.png
-│   │   ├── shop-page.png
+│   │   ├── landing-page.png  # added in readme 
+│   │   ├── shop-page.png     # added in readme
 │── index.html     # Main landing page
 │── shop.html      # "Shop Now" page
 │── image_to_webp.py  # Python script for WebP conversion
@@ -54,11 +54,11 @@ python image_to_webp.py
 - Skips already converted files.
 
 ## 📸 Screenshots
-🔹 **Landing Page Preview**  
-![Landing Page](#)
+### 🔹Landing Page Preview  
+![Landing Page](assets/screenshots/landing-page.png)
 
-🔹 **Shop Now Page**  
-![Shop Page](#)
+### 🔹Shop Now Page  
+![Shop Page](assets/screenshots/shop-page.png)
 
 ## 🌟 Technologies Used
 - **HTML5**
@@ -68,10 +68,12 @@ python image_to_webp.py
 ## 📬 Connect with Me
 Let's connect! Feel free to reach out for collaboration or suggestions. 🚀
 
-[![GitHub](https://img.shields.io/badge/GitHub-Profile-blue?logo=github)](https://github.com/your-huzaifa-2005)  
+[![GitHub](https://img.shields.io/badge/GitHub-Profile-blue?logo=github)](https://github.com/huzaifa-2005)  
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?logo=linkedin)](https://www.linkedin.com/in/huzaifa-ahmed-7843ba336/)
 
 ---
 
-⭐ **Star** this repository if you find it useful!
+## ⭐ Support
+If you found this project useful, consider **starring** ⭐ it to show your support!  
+
 
