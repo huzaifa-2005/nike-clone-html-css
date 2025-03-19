@@ -9,6 +9,9 @@
     }
     
     body {
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
       background-color: #A52A2A; /* Slightly lighter dark red */
       color: #ffffff; 
       line-height: 1.6;
@@ -27,11 +30,6 @@
       text-align: center;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
       flex-wrap: wrap;
-    }
-
-    .header-content{
-      max-width: 100%; 
-      text-align: center; 
     }
 
     .footer-section{
@@ -122,6 +120,13 @@
       .shoe-card {
         width: 45%; /* Two shoes per row on smaller screens */
       }
+      .header-content{
+        max-width: 100%; 
+        text-align: center; 
+      }
+      .footer-content{  
+        max-width: 100%; 
+        text-align: center; 
     }
     
     @media (max-width: 480px) {
@@ -129,3 +134,4 @@
         width: 90%; /* One shoe per row on very small screens */
       }
     }
+    
