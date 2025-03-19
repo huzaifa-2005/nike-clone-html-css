@@ -2,15 +2,22 @@ import os
 import shutil
 from PIL import Image
 
-# Ensure AVIF support
+
 try:
     import pillow_avif
-      # Ensure AVIF support
+      
 except ImportError:
     print("Missing AVIF plugin! Install it using: pip install pillow-avif-plugin")
     exit()
 
-IMAGE_EXTENSIONS = (".jpg", ".jpeg", ".png", ".webp", ".avif")  # Added AVIF support
+IMAGE_EXTENSIONS = (
+    '.jpg', '.jpeg', '.png', '.gif', '.webp',  # Common formats
+    '.tiff', '.tif', '.bmp', '.svg', '.heic',  # Additional formats
+    '.ico', '.jfif', '.pjpeg', '.pjp',         # Other formats used in browsers
+    '.avif', '.raw', '.arw', '.cr2', '.nrw',   # High-quality & RAW formats
+    '.orf', '.sr2', '.raf', '.dng'             # Camera RAW formats
+)
+  
 
 # Getting script directory
 script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -34,7 +41,7 @@ os.makedirs(original_folder, exist_ok=True)
 os.makedirs(webp_folder, exist_ok=True)
 
 def check_for_images(original_folder):
-    """Check if at least one image exists in the original folder."""
+    # Check if at least one image exists in the original folder.
     return any(file.lower().endswith(IMAGE_EXTENSIONS) for file in os.listdir(original_folder))
 
 # Exit if no images are found
@@ -42,7 +49,7 @@ if not check_for_images(original_folder):
     print("Error: No image files found in 'original images/' folder! Exiting...")
     exit()
 
-# Process images
+# here , start of processing images
 for filename in os.listdir(original_folder):
     file_path = os.path.join(original_folder, filename)
     file_ext = filename.lower().endswith(IMAGE_EXTENSIONS)
@@ -51,24 +58,25 @@ for filename in os.listdir(original_folder):
         webp_filename = os.path.splitext(filename)[0] + ".webp"
         webp_path = os.path.join(webp_folder, webp_filename)
 
-        # CASE 1: WebP already exists in `webp images/`
+        # CASE 1: the image already exists as a  WebP file in `webp images/`
         if os.path.exists(webp_path):
             print(f"Skipping {filename} (WebP already exists in webp images/)")
             continue  
 
-        # CASE 2: WebP exists in `original images/`, move it
+        # CASE 2: image WebP exists in `original images/`, so we are moving it to the `webp images/` , no need to convert
         original_webp_path = os.path.join(original_folder, webp_filename)
         if os.path.exists(original_webp_path):
             print(f"Moving {webp_filename} to webp images folder")
             shutil.move(original_webp_path, webp_path)
             continue  
 
-        # CASE 3: Convert to WebP
+        # CASE 3: Conversion into WebP when both above cases are false
         try:
-            print(f"⚡ Converting {filename} to WebP...")
+            print(f" Converting {filename} to WebP...")
             image = Image.open(file_path)
             image.save(webp_path, "WEBP", quality=80)
-            print(f" Successfully converted: {filename} → {webp_filename}")
+            print(f" Successfully converted: {filename} into {webp_filename}")
+        # in case , if the processing file is not not an image    
         except Exception as e:
             print(f" Error processing {filename}: {e}")
 
