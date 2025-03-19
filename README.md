@@ -43,7 +43,7 @@ git clone https://github.com/huzaifa-2005/nike-clone-html-css.git
 #### 📌 Prerequisites
 Ensure you have the required Python libraries installed:
 ```bash
-pip install pillow pillow-avif-plugin
+pip install pillow-avif-plugin
 ```
 #### 🛠️ Run the WebP Conversion Script
 ```bash
