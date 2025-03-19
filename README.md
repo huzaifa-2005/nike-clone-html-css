@@ -55,7 +55,7 @@ python image_to_webp.py
 
 ## 📸 Screenshots
 ### 🔹Landing Page Preview  
-![Landing Page](assets/screenshots/landing-page.png)
+<img src="assets/screenshots/landing-page.png" width="800" height="680">
 
 ### 🔹Shop Now Page  
 ![Shop Page](assets/screenshots/shop-page.png)
@@ -64,13 +64,6 @@ python image_to_webp.py
 - **HTML5**
 - **CSS3** (Flexbox, Grid, Responsive Design)
 - **Python** (for WebP image conversion)
-
-## 📬 Connect with Me
-Let's connect! Feel free to reach out for collaboration or suggestions. 🚀
-
-[![GitHub](https://img.shields.io/badge/GitHub-Profile-blue?logo=github)](https://github.com/huzaifa-2005)  
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?logo=linkedin)](https://www.linkedin.com/in/huzaifa-ahmed-7843ba336/)
-
 ---
 
 ## ⭐ Support
