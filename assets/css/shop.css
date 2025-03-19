@@ -15,7 +15,7 @@
       overflow-x: hidden; /* Prevents horizontal scrolling */
     }
     
-    header {
+    .header-section {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -26,9 +26,15 @@
       padding: 20px;
       text-align: center;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+      flex-wrap: wrap;
     }
 
-    footer {
+    .header-content{
+      max-width: 100%; 
+      text-align: center; 
+    }
+
+    .footer-section{
       
       display: flex;
       flex-wrap: wrap;
@@ -42,8 +48,10 @@
       text-align: center;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     }
-    .footer-text{
+    .footer-content{
       margin-top: 15px;  
+      max-width: 100%; 
+      text-align: center; 
     }
     /* here , the styling of body starts */
     .engaging-text {
@@ -60,6 +68,10 @@
       font-weight: 600; /* Bold text */
       color: #ffffff; /* White text */
       margin: 0;
+    }
+
+    .shoe-grid-section{
+      max-width: 100%;
     }
     
     .shop-container {
